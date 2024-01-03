@@ -6273,3 +6273,191 @@ Processing by ExpensesController#index as HTML
 Completed 200 OK in 964ms (Views: 696.3ms | ActiveRecord: 4.6ms | Allocations: 174226)
 
 
+Started GET "/expenses?month=January" for ::1 at 2024-01-03 23:33:50 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"January", "expect"=>[:show]}
+  [1m[36mExpense Load (1.0ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '01')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '01') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered collection of expenses/_expense.html.erb [1 times] (Duration: 0.5ms | Allocations: 113)
+  Rendered collection of expenses/_expense.html.erb [1 times] (Duration: 9.6ms | Allocations: 109)
+  Rendered expenses/index.html.erb within layouts/application (Duration: 68.1ms | Allocations: 6251)
+  Rendered layout layouts/application.html.erb (Duration: 79.3ms | Allocations: 12802)
+Completed 200 OK in 85ms (Views: 79.9ms | ActiveRecord: 1.7ms | Allocations: 15775)
+
+
+Started GET "/expenses?month=February" for ::1 at 2024-01-03 23:33:52 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"February", "expect"=>[:show]}
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '02')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '02') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 856)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 7210)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 9776)
+
+
+Started GET "/expenses?month=March" for ::1 at 2024-01-03 23:33:53 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"March", "expect"=>[:show]}
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '03')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '03') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 852)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 7210)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 9775)
+
+
+Started GET "/expenses?month=April" for ::1 at 2024-01-03 23:33:54 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"April", "expect"=>[:show]}
+  [1m[36mExpense Load (0.3ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '04')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '04') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 850)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 7224)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 9774)
+
+
+Started GET "/expenses?month=May" for ::1 at 2024-01-03 23:33:55 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"May", "expect"=>[:show]}
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '05')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '05') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 850)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 7211)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 9776)
+
+
+Started GET "/expenses?month=June" for ::1 at 2024-01-03 23:33:55 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"June", "expect"=>[:show]}
+  [1m[36mExpense Load (0.3ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '06')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '06') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 856)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 7376)
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 9926)
+
+
+Started GET "/expenses?month=July" for ::1 at 2024-01-03 23:33:57 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"July", "expect"=>[:show]}
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '07')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '07') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered collection of expenses/_expense.html.erb [1 times] (Duration: 0.3ms | Allocations: 109)
+  Rendered expenses/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 7390)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 10004)
+
+
+Started GET "/expenses?month=August" for ::1 at 2024-01-03 23:33:57 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"August", "expect"=>[:show]}
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '08')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '08') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 844)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 7198)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 0.4ms | Allocations: 9749)
+
+
+Started GET "/expenses?month=September" for ::1 at 2024-01-03 23:33:58 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"September", "expect"=>[:show]}
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '09')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '09') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 856)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 7210)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 9760)
+
+
+Started GET "/expenses?month=October" for ::1 at 2024-01-03 23:33:59 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"October", "expect"=>[:show]}
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '10')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '10') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 852)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 7206)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 9756)
+
+
+Started GET "/expenses?month=November" for ::1 at 2024-01-03 23:34:00 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"November", "expect"=>[:show]}
+  [1m[36mExpense Load (0.3ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '11')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '11') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 850)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 7204)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 9754)
+
+
+Started GET "/expenses?month=December" for ::1 at 2024-01-03 23:34:00 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"month"=>"December", "expect"=>[:show]}
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '12')[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE (strftime('%m', date) = '12') ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered expenses/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 846)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7200)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 9750)
+
+
+Started GET "/expenses" for ::1 at 2024-01-03 23:34:02 +0200
+Processing by ExpensesController#index as HTML
+  Parameters: {"expect"=>[:show]}
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses"[0m
+  ↳ app/controllers/expenses_controller.rb:13:in `group_by'
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" ORDER BY "expenses"."date" DESC[0m
+  ↳ app/controllers/expenses_controller.rb:14:in `group_by'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/index.html.erb within layouts/application
+  Rendered collection of expenses/_expense.html.erb [1 times] (Duration: 0.2ms | Allocations: 109)
+  Rendered collection of expenses/_expense.html.erb [1 times] (Duration: 0.2ms | Allocations: 113)
+  Rendered collection of expenses/_expense.html.erb [1 times] (Duration: 0.2ms | Allocations: 109)
+  Rendered expenses/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1426)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 7780)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 10444)
+
+
