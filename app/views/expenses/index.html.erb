@@ -3,16 +3,31 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
+  <div class="flex justify-between mb-4 flex-wrap">
+    <%= link_to expenses_path do %>
+      <button class="bg-sky-500 rounded-lg py-3 text-white hover:bg-sky-300">All</button>
+    <% end %>
+    <% @months.each do |month| %>
+    <%= link_to expenses_path(month: month) do %>
+        <button class="bg-sky-500 rounded-lg py-3 text-white hover:bg-sky-300"><%= month %></button>
+      <% end %>
+    <% end %>
+  </div>
+  
+
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Expenses</h1>
+    <h1 class="font-bold text-4xl">Expenses (<%= @expenses.map(&:amount).sum %>) Egyptian Pound</h1>
     <%= link_to "New expense", new_expense_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
   <div id="expenses" class="min-w-full mt-4 rounded-lg">
     <% @expense_by_day.each do |day, expenses| %>
-    <h2><%= day %></h2>
+    <div class="flex justify-between">
+    <h2 class="text-lg mt-2 mb-2 font-medium"><%= day %></h2>
+    <h2 class="text-lg mt-2 mb-2 font-medium"><%= expenses.map(&:amount).sum.round(2) %> E£</h2>
+  </div>
     <table class="table-fixed border-collapse border border-slate-200 rounded-lg">
-        <thead class="bg-sky-500 text-white rounded-md text-left">
+        <thead class="bg-gray-800 text-white rounded-md text-left">
           <tr class="rounded-md">
             <th class="min-w-[150px] p-3 font-medium">Name</th>
             <th class="min-w-[150px] p-3 font-medium">Date</th>
